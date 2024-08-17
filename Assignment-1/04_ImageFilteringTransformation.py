@@ -8,8 +8,16 @@
 
 # G(x,y) = 1/2*PI*Sigma^2 * exp(- x^2 + y^2/2*sigma^2)
 
+class ImageFilteringTransformation:
+    def __init__(self):
+            pass
+    
+    def image_filter():
+        pass
 
-
+    def image_transform():
+        pass
+    
 
 
 
