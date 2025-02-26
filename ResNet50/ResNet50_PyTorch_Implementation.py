@@ -7,6 +7,16 @@ import torch.nn.functional as F
 
 # Custom ReLU Activation function. 
 # f(x) = max(0, x)
+
+'''
+# Why Use ReLU ?
+- Prevents Vanishing Gradient - Unlike Sigmoid or tanh, it does not squash values between -1 & 1. 
+- Computationally Efficient - Simple max operation, making it fast. 
+- Better for Deep Networks - Helps with Learning Complex patterns. 
+
+# Limitation:
+ - Dying ReLU Problem - If neurons output only 0, they stop learning. This is why variants like Leaky ReLU exist.
+'''
 def my_relu(x):
     # if x > 0:
     #     return x 
