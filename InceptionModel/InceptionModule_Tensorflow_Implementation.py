@@ -1,5 +1,5 @@
-import tensorflow as tf 
-from tensorflow.keras import layers, models
+import tensorflow as tf
+from tensorflow.keras import layers
 
 # Building an Inceptions Module. 
 def inception_module(x, filters_1x1, filters_3x3_reduce, filters_3x3, filters_5x5_reduce, filters_5x5, filters_pool_proj):
@@ -106,7 +106,7 @@ def build_googlenet(input_shape, num_classes):
     output_layer = layers.Dense(num_classes, activation='softmax')(x)
 
     # Define the model with inputs and three outputs (main + 2 auxiliary)
-    model = models.Model(inputs=input_layer, outputs=[output_layer, aux1, aux2])
+    model = tf.keras.Model(inputs=input_layer, outputs=[output_layer, aux1, aux2])
     return model
 
 # Model parameters
